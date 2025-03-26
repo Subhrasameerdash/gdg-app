@@ -1,5 +1,3 @@
-Got it! Below is the **final detailed README**, now including the **full details** and **integration steps** for the **GDG-Codes repo** that contains the AI/ML model.  
-
 ---
 
 # **📚 Assistant Teacher App**  
