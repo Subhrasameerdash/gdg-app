@@ -111,8 +111,8 @@ git push origin main
 
 ## 👨‍💻 **Developed By**
 **Shubham Nayak**  
-✉️ Email: *shubham.nayak1972@gmail.com*  
-🔗 GitHub: [smallBrat](https://github.com/smallBrat)  
+✉️ Email: *your.email@example.com*  
+🔗 GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)  
 ```
 
 ---
@@ -126,3 +126,5 @@ git push origin main
   git commit -m "Added README"
   git push origin main
   ```
+
+Now your repo will be **well-documented** and ready for collaboration! 🚀🔥 Let me know if you need more refinements! 😊
