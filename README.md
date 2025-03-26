@@ -114,3 +114,15 @@ git push origin main
 ✉️ Email: *shubham.nayak1972@gmail.com*  
 🔗 GitHub: [smallBrat](https://github.com/smallBrat)  
 ```
+
+---
+
+## **🛠 Next Steps**
+- ✅ **Replace `YOUR_USERNAME` & `YOUR_REPO_NAME`** with your GitHub details.  
+- ✅ **Customize the README** (if needed).  
+- ✅ **Push the README to GitHub**
+  ```sh
+  git add README.md
+  git commit -m "Added README"
+  git push origin main
+  ```
