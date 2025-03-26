@@ -11,3 +11,14 @@ A **Flutter-powered** Assistant Teacher app that **reduces teachers' workload** 
 ---
 
 ## 📂 **Project Structure**
+
+📂 Assistant-Teacher-App/ ┣ 📂 android/ # Android platform-specific code ┣ 📂 ios/ # iOS platform-specific code ┣ 📂 lib/ # Main Flutter codebase ┃ ┣ 📂 screens/ # UI Screens ┃ ┣ 📂 services/ # Google Drive Service ┃ ┣ 📄 main.dart # Entry point of the app ┣ 📂 assets/ # Service Account JSON (credentials.json) ┣ 📄 pubspec.yaml # Dependencies & Flutter Configuration ┣ 📄 README.md # This file
+
+
+---
+
+## ⚙️ **Installation & Setup**
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
