@@ -1,7 +1,9 @@
+Got it! Below is the **final detailed README**, now including the **full details** and **integration steps** for the **GDG-Codes repo** that contains the AI/ML model.  
+
 ---
 
 # **📚 Assistant Teacher App**  
-An **AI-powered assistant** that helps teachers by automating tasks like **grading, report generation, and assignment uploads** using **Google Drive integration**.  
+An **AI-powered assistant** that helps teachers by automating tasks like **grading, report generation, and assignment uploads** using **Google Drive integration** and **AI models**.  
 
 ---
 
@@ -9,7 +11,7 @@ An **AI-powered assistant** that helps teachers by automating tasks like **gradi
 ✔️ **Upload Assignments to Google Drive** directly from the app  
 ✔️ **Google Authentication** using a **Service Account**  
 ✔️ **File Picker** for selecting assignments  
-✔️ **AI-Powered Automation** (Grading, Report Generation) *(Future Implementation)*  
+✔️ **AI-Powered Automation** *(Grading, Report Generation, and More)*  
 ✔️ **Easy Integration** with ML models *(Linking External Repo)*  
 
 ---
@@ -24,6 +26,7 @@ The project follows a **structured folder hierarchy** to keep everything organiz
 ┣ 📂 lib/               # Main Flutter application
 ┃ ┣ 📂 screens/         # UI Screens (Upload, Dashboard, etc.)
 ┃ ┣ 📂 services/        # Google Drive Service & Authentication
+┃ ┣ 📂 ai_model/        # Integration with AI/ML model
 ┃ ┣ 📄 main.dart        # Entry point of the application
 ┣ 📂 assets/            # Stores credentials.json for Google Drive API
 ┣ 📄 pubspec.yaml       # Dependencies & Flutter Configurations
@@ -40,6 +43,8 @@ Before running the application, ensure that you have the following installed on 
 ✅ **Dart SDK** – Installed with Flutter  
 ✅ **Google Drive API Credentials** (Service Account)  
 ✅ **Android Studio / VS Code** (for running the Flutter app)  
+✅ **Python 3.8+** (For AI Model Integration)  
+✅ **Required Python Libraries** (For ML Model)  
 
 ---
 
@@ -151,59 +156,25 @@ class GoogleDriveService {
 }
 ```
 
-#### **📜 Upload Assignment Screen (`upload_assignment.dart`)**
-```dart
-import 'package:flutter/material.dart';
-import '../services/google_auth.dart';
-
-class UploadAssignmentScreen extends StatelessWidget {
-  final GoogleDriveService _googleDriveService = GoogleDriveService();
-
-  UploadAssignmentScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Upload Assignment")),
-
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () async {
-            await _googleDriveService.authenticate();
-            String? fileId = await _googleDriveService.uploadFileToDrive();
-            
-            if (fileId != null) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text("✅ File uploaded! ID: $fileId")),
-              );
-            } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("❌ Upload failed")),
-              );
-            }
-          },
-          child: const Text("Upload Assignment to Google Drive"),
-        ),
-      ),
-    );
-  }
-}
-```
-
 ---
 
-## **🔗 External Repository (ML Model Integration)**
-This project is connected to another GitHub repository that contains an **AI model** for automation.  
+## **🤖 AI/ML Model Integration**
+This project integrates an **AI model** for **assignment checking, grading, and automation**. The model is hosted in an external GitHub repository:
 
-🔗 **External Model Repository:**  
-[GDG-Codes](https://github.com/Subhrasameerdash/gdg-codes)
+🔗 **External AI Model Repository:**  
+[GDG-Codes Repository](https://github.com/Subhrasameerdash/gdg-codes)
 
-### **🔹 How to Integrate the Model**
-To use the ML model with this project:
-```sh
-git clone https://github.com/Subhrasameerdash/gdg-codes.git
-```
-Then, import the necessary AI/ML model files into your **Assistant Teacher App**.
+### **🔹 How to Integrate the AI Model**
+1. Clone the external repo:
+   ```sh
+   git clone https://github.com/Subhrasameerdash/gdg-codes.git
+   ```
+2. Move the required AI model files into your **Assistant Teacher App** inside the `lib/ai_model/` folder.  
+3. Install required dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Modify your **Flutter app** to interact with the AI model via an API or direct function calls.
 
 ---
 
@@ -219,11 +190,16 @@ Then, import the necessary AI/ML model files into your **Assistant Teacher App**
 - Check if the **service account email** has **Editor access** to the shared Drive folder.  
 - Restart the app and try again.  
 
+### **🔹 AI Model Not Working?**
+- Make sure you installed **Python 3.8+**.  
+- Run `pip install -r requirements.txt` inside the `gdg-codes` folder.  
+- Check the API connection if using an external ML service.  
+
 ---
 
 ## **👨‍💻 Contributors**
-- **[Shubham Nayak]** – *Frontend Developer*  
-- **[Subhra Sameer Das]** – *ML Model & Backend*  
+- **[Shubham Nayak](https://github.com/smallBrat)** – *Frontend Developer*  
+- **[Subhra Sameer Dash](https://github.com/Subhrasameerdash)** – *ML Model Contributor*   
 
 ---
 
