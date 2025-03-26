@@ -1,16 +1,13 @@
-# assignment_checker
+# 📚 Assistant Teacher App 🎓  
+A **Flutter-powered** Assistant Teacher app that **reduces teachers' workload** by automating assignment uploads and integrating with **Google Drive**.
 
-A new Flutter project.
+## 🚀 Features  
+✅ **Google Drive Integration** – Upload assignments directly from the app  
+✅ **Service Account Authentication** – Secure Google Drive access  
+✅ **File Picker Support** – Easily select files from your device  
+✅ **Google Classroom Integration** (Planned)  
+✅ **AI Model for Assignment Evaluation** – (To be connected via external repo)  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📂 **Project Structure**
