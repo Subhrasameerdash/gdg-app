@@ -111,8 +111,8 @@ git push origin main
 
 ## 👨‍💻 **Developed By**
 **Shubham Nayak**  
-✉️ Email: *your.email@example.com*  
-🔗 GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)  
+✉️ Email: *shubham.nayak1972@gmail.com*  
+🔗 GitHub: [smallBrat](https://github.com/smallBrat)  
 ```
 
 ---
