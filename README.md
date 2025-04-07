@@ -1,3 +1,5 @@
+Sure! Here's the full updated file with an **App Download Link** section added near the top for better visibility.
+
 ---
 
 # **📚 Assistant Teacher App**  
@@ -5,7 +7,11 @@ An **AI-powered assistant** that helps teachers by automating tasks like **gradi
 
 ---
 
-## **🚀 Features**
+## **📲 App Download Link**  
+📥 [Open the app in mobile (android/ios)]((https://googledevellopergroup.netlify.app/))  
+---
+
+## **🚀 Features**  
 ✔️ **Upload Assignments to Google Drive** directly from the app  
 ✔️ **Google Authentication** using a **Service Account**  
 ✔️ **File Picker** for selecting assignments  
@@ -14,8 +20,8 @@ An **AI-powered assistant** that helps teachers by automating tasks like **gradi
 
 ---
 
-## **📂 Project Structure**
-The project follows a **structured folder hierarchy** to keep everything organized:  
+## **📂 Project Structure**  
+The project follows a **structured folder hierarchy** to keep everything organized:
 
 ```
 📂 Assistant-Teacher-App/
@@ -34,7 +40,7 @@ The project follows a **structured folder hierarchy** to keep everything organiz
 
 ---
 
-## **📌 Prerequisites**
+## **📌 Prerequisites**  
 Before running the application, ensure that you have the following installed on your system:
 
 ✅ **Flutter SDK** (Latest Version) – [Download Flutter](https://flutter.dev/docs/get-started/install)  
@@ -47,7 +53,6 @@ Before running the application, ensure that you have the following installed on 
 ---
 
 ## **🔧 Installation & Setup**
-Follow these steps to set up the project on your local machine.
 
 ### **1️⃣ Clone the Repository**
 ```sh
@@ -56,74 +61,69 @@ cd Assistant-Teacher-App
 ```
 
 ### **2️⃣ Install Dependencies**
-Navigate to the project folder and run:
 ```sh
 flutter pub get
 ```
 
 ### **3️⃣ Set Up Google Drive API (Service Account)**
-Since the app interacts with Google Drive, follow these steps:
 
-#### **🔹 Step 1: Enable Google Drive API**
-1. Open [Google Cloud Console](https://console.cloud.google.com/).  
-2. Create a new project (if not already created).  
-3. Navigate to **APIs & Services > Enable APIs and Services**.  
-4. Search for **Google Drive API** and enable it.
+#### 🔹 **Enable Google Drive API**
+1. Open [Google Cloud Console](https://console.cloud.google.com/)  
+2. Create a new project  
+3. Go to **APIs & Services > Enable APIs and Services**  
+4. Search and enable **Google Drive API**  
 
-#### **🔹 Step 2: Create a Service Account**
-1. In **Google Cloud Console**, go to **IAM & Admin > Service Accounts**.  
-2. Click **Create Service Account** and fill in the details.  
-3. Assign the **Editor** role to allow file uploads.  
-4. Click **Create Key** and select **JSON** format.  
-5. Download the JSON file (e.g., `service_account.json`).  
+#### 🔹 **Create a Service Account**
+1. Go to **IAM & Admin > Service Accounts**  
+2. Click **Create Service Account**, fill in details  
+3. Assign **Editor** role  
+4. Generate and download **JSON key**  
 
-#### **🔹 Step 3: Move JSON Credentials to the Project**
-1. Rename the downloaded JSON file to **credentials.json**.  
-2. Place it inside the **assets/** folder of the project.  
+#### 🔹 **Add Credentials to Project**
+1. Rename the downloaded JSON to `credentials.json`  
+2. Place it inside the `assets/` folder  
 
-#### **🔹 Step 4: Share a Google Drive Folder with the Service Account**
-1. Go to your **Google Drive** and create a new folder.  
-2. Right-click the folder and choose **Share**.  
-3. Copy the **service account email** from the JSON file.  
-4. Share the folder with that email and grant **Editor access**.  
+#### 🔹 **Share Google Drive Folder**
+1. Create a new folder in Google Drive  
+2. Share with the service account email from the JSON file  
+3. Give **Editor access**
 
 ---
 
 ## **📡 Running the Application**
-Once the setup is complete, you can run the application:
 
+### **Run in Debug Mode**
 ```sh
 flutter run
 ```
 
-If you're using an emulator:
+### **Launch Emulator (Optional)**
 ```sh
 flutter emulators --launch <emulator_name>
 flutter run
 ```
 
-To build for Android:
+### **Build APK**
 ```sh
 flutter build apk
 ```
 
-To build for iOS (Mac required):
+### **Build for iOS (Mac Required)**
 ```sh
 flutter build ios
 ```
 
 ---
 
-## **📡 Google Drive Authentication (Service Account)**
-### **🔹 How Authentication Works**
-The app authenticates using a **Google Service Account**, allowing it to upload assignments to Google Drive. When you press **"Upload Assignment"**, the following happens:  
-1. The **service account credentials.json** is loaded.  
-2. The app connects to **Google Drive API** using OAuth.  
-3. A **file picker** lets the user choose a file.  
-4. The selected file is uploaded to the shared **Google Drive folder**.  
+## **🔐 Google Drive Authentication (Service Account)**
 
-### **🔹 Code Implementation**
-#### **📜 Google Authentication Service (`google_auth.dart`)**
+### **How It Works**
+1. Loads `credentials.json`  
+2. Authenticates using OAuth via Service Account  
+3. Opens file picker  
+4. Uploads selected file to Google Drive folder  
+
+### **Sample Code (`google_auth.dart`)**
 ```dart
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
@@ -157,51 +157,29 @@ class GoogleDriveService {
 ---
 
 ## **🤖 AI/ML Model Integration**
-This project integrates an **AI model** for **assignment checking, grading, and automation**. The model is hosted in an external GitHub repository:
 
-🔗 **External AI Model Repository:**  
+🔗 **External Repository:**  
 [GDG-Codes Repository](https://github.com/Subhrasameerdash/gdg-codes)
 
-### **🔹 How to Integrate the AI Model**
-1. Clone the external repo:
+### **Integration Steps**
+1. Clone the repo  
    ```sh
    git clone https://github.com/Subhrasameerdash/gdg-codes.git
    ```
-2. Move the required AI model files into your **Assistant Teacher App** inside the `lib/ai_model/` folder.  
-3. Install required dependencies:
+2. Move model files to `lib/ai_model/`  
+3. Install Python dependencies  
    ```sh
    pip install -r requirements.txt
    ```
-4. Modify your **Flutter app** to interact with the AI model via an API or direct function calls.
+4. Set up API or direct linking to Flutter app
 
 ---
 
 ## **🛠 Troubleshooting**
-### **🔹 App Not Running?**
-- Make sure you installed **Flutter & Dart** properly.  
-- Run `flutter doctor` to check for missing dependencies.  
-- Ensure `credentials.json` is in the correct folder (`assets/`).  
-- Restart the app after making changes.  
 
-### **🔹 File Not Uploading to Google Drive?**
-- Ensure the **Google Drive API is enabled** in Google Cloud.  
-- Check if the **service account email** has **Editor access** to the shared Drive folder.  
-- Restart the app and try again.  
-
-### **🔹 AI Model Not Working?**
-- Make sure you installed **Python 3.8+**.  
-- Run `pip install -r requirements.txt` inside the `gdg-codes` folder.  
-- Check the API connection if using an external ML service.  
-
----
-
-## **👨‍💻 Contributors**
-- **[Shubham Nayak](https://github.com/smallBrat)** – *Frontend Developer*  
-- **[Subhra Sameer Dash](https://github.com/Subhrasameerdash)** – *ML Model Contributor*   
-
----
-
-## **📜 License**
-This project is open-source and follows the **MIT License**.
+### App Not Running?
+- Run `flutter doctor` to diagnose issues  
+- Check that all SDKs and dependencies are installed  
+- Ensure service account is correctly configured  
 
 ---
