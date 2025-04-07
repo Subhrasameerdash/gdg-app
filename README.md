@@ -1,5 +1,3 @@
-Sure! Here's the full updated file with an **App Download Link** section added near the top for better visibility.
-
 ---
 
 # **📚 Assistant Teacher App**  
@@ -7,8 +5,8 @@ An **AI-powered assistant** that helps teachers by automating tasks like **gradi
 
 ---
 
-## **📲 App Download Link**  
-📥 [Open the app in mobile (android/ios)]((https://googledevellopergroup.netlify.app/))  
+## **📲 App Link**  
+🌐 [Visit the Assistant Teacher App (Mobile)](https://googledevellopergroup.netlify.app/)  
 ---
 
 ## **🚀 Features**  
